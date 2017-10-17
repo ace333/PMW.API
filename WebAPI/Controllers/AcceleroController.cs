@@ -7,7 +7,7 @@ using WebAPI.Abstraction;
 
 namespace WebAPI.Controllers
 {
-    [Route("acc")]
+    [Route("Accelero")]
     public class AcceleroController : Controller
     {
         private readonly IAcceleroRepository _acceleroRepository;
@@ -17,7 +17,7 @@ namespace WebAPI.Controllers
             _acceleroRepository = acceleroRepository;
         }
 
-        [HttpGet("id")]
+        [HttpGet("Id")]
         public int GetAcceleroLastId()
         {
             return _acceleroRepository.GetLastId();

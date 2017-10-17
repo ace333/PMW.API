@@ -7,7 +7,7 @@ using WebAPI.Abstraction;
 
 namespace WebAPI.Controllers
 {
-    [Route("hr")]
+    [Route("HeartRate")]
     public class HeartRateController : Controller
     {
         private readonly IHeartRateRepository _heartRateRepository;
@@ -17,7 +17,7 @@ namespace WebAPI.Controllers
             _heartRateRepository = heartRateRepository;
         }
 
-        [HttpGet("id")]
+        [HttpGet("Id")]
         public int GetHeartRateLastId()
         {
             return _heartRateRepository.GetLastId();
