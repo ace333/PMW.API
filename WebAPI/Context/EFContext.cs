@@ -26,8 +26,8 @@ namespace WebAPI.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<HeartRate>().ToTable("HeartRate");
-            modelBuilder.Entity<Accelero>().ToTable("Accelero");
+            modelBuilder.Entity<HeartRate>().ToTable("heartrate");
+            modelBuilder.Entity<Accelero>().ToTable("accelero");
         }
     }
 }

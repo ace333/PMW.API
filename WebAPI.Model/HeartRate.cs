@@ -9,6 +9,7 @@ namespace WebAPI.Model
 {
     public class HeartRate : IHeartRate
     {
+        [Column("id")]
         public int Id { get; set; }
         [Column("heart_m_1")]
         public double HeartMeasure_1 { get; set; }

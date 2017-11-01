@@ -30,7 +30,8 @@ namespace WebAPI
         {
             services.AddMvc();
 
-            services.AddDbContext<EFContext>(x => x.UseSqlServer(Configuration.GetConnectionString("PSQL")));
+            //services.AddDbContext<EFContext>(x => x.UseSqlServer(Configuration.GetConnectionString("MSQL")));
+            services.AddDbContext<EFContext>(x => x.UseNpgsql(Configuration.GetConnectionString("PSQL")));
 
             services.AddTransient(typeof(IEFDbContext), typeof(EFContext));
             services.AddTransient(typeof(IHeartRate), typeof(HeartRate));

@@ -9,6 +9,7 @@ namespace WebAPI.Model
 {
     public class Accelero : IAccelero
     {
+        [Column("id")]
         public int Id { get; set; }
 
         [Column("x_m_1")]
